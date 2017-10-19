@@ -20,5 +20,5 @@ export default function VueSentry (Vue, options) {
       .addPlugin(RavenVue, Vue)
       .install()  
   
-  Vue.prototype.$raven = Raven
+  Vue.raven = Vue.prototype.$raven = Raven
 }
