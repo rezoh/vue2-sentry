@@ -14,7 +14,7 @@ export default function VueSentry (Vue, options) {
   if (!options.enable) return
 
   Raven
-      .config(`${options.protocol || 'https'}://${options.key}@sentry.io/${options.project}`, {
+      .config(`${options.dsn}`, {
         ...options.config
       })
       .addPlugin(RavenVue, Vue)
